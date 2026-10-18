@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPulse AI — Inteligencia Cripto, DeFi Yields & Alertas On-Chain 24/7</title>
+    <meta name="description" content="Radar autónomo con Inteligencia Artificial que detecta los mejores rendimientos DeFi en stablecoins, monedas en tendencia y bonos exclusivos de exchanges.">
+    <style>
+    :root {
+        --bg: #0b0f19;
+        --card: #131b2e;
+        --border: #1f2b47;
+        --accent: #00f0ff;
+        --accent-green: #10b981;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.65;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    header {
+        border-bottom: 1px solid var(--border);
+        background: rgba(11, 15, 25, 0.9);
+        backdrop-filter: blur(10px);
+        position: sticky; top: 0; z-index: 50;
+    }
+    .nav {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 18px 0;
+    }
+    .logo { font-size: 1.35rem; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
+    .logo span { color: var(--accent); }
+    .hero {
+        padding: 64px 0 40px;
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+    }
+    .hero h1 { font-size: 2.6rem; font-weight: 800; margin-bottom: 16px; color: #fff; }
+    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 720px; margin: 0 auto 28px; }
+    .cta-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+        background: linear-gradient(135deg, #00f0ff, #0088ff);
+        color: #06101e; font-weight: 700; padding: 13px 26px; border-radius: 10px;
+    }
+    .btn-secondary {
+        background: var(--card); border: 1px solid var(--border);
+        color: #fff; font-weight: 600; padding: 13px 26px; border-radius: 10px;
+    }
+    .section-title { font-size: 1.65rem; font-weight: 800; margin: 48px 0 20px; color: #fff; }
+    .aff-grid {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px;
+    }
+    .aff-card {
+        background: var(--card); border: 1px solid var(--border);
+        border-radius: 14px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .aff-badge {
+        font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.8px;
+        color: var(--accent-green); font-weight: 700; margin-bottom: 8px;
+    }
+    .aff-card h3 { font-size: 1.3rem; color: #fff; margin-bottom: 8px; }
+    .aff-card p { font-size: 0.9rem; color: var(--muted); margin-bottom: 14px; }
+    .aff-code { font-size: 0.85rem; margin-bottom: 16px; color: #cbd5e1; }
+    .aff-code code { background: #0b0f19; padding: 3px 8px; border-radius: 6px; color: var(--accent); }
+    .btn-aff {
+        display: block; text-align: center; background: rgba(0, 240, 255, 0.12);
+        border: 1px solid rgba(0, 240, 255, 0.35); color: var(--accent);
+        padding: 10px; border-radius: 8px; font-weight: 700; font-size: 0.9rem;
+    }
+    .btn-aff:hover { background: var(--accent); color: #06101e; }
+    .articles-grid {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px;
+    }
+    .article-card {
+        background: var(--card); border: 1px solid var(--border);
+        border-radius: 14px; padding: 26px;
+    }
+    .article-date { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+    .article-card h3 { font-size: 1.25rem; color: #fff; margin-bottom: 12px; }
+    .article-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 18px; }
+    .vip-banner {
+        margin: 56px 0; padding: 36px; border-radius: 16px;
+        background: linear-gradient(135deg, rgba(0,240,255,0.09), rgba(16,185,129,0.09));
+        border: 1px solid rgba(0,240,255,0.3);
+    }
+    .article-content {
+        background: var(--card); border: 1px solid var(--border);
+        border-radius: 16px; padding: 36px; margin-top: 32px;
+    }
+    .article-content h2, .article-content h3 { color: #fff; margin: 24px 0 12px; }
+    .article-content p, .article-content li { margin-bottom: 12px; color: #cbd5e1; }
+    .article-content ul { padding-left: 22px; margin-bottom: 18px; }
+    .article-content table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    .article-content th, .article-content td {
+        border: 1px solid var(--border); padding: 12px; text-align: left;
+    }
+    .article-content th { background: #0b0f19; color: var(--accent); }
+    footer {
+        border-top: 1px solid var(--border); margin-top: 64px; padding: 36px 0;
+        text-align: center; color: var(--muted); font-size: 0.9rem;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">Alpha<span>Radar</span> AI</a>
+            <div>
+                <a href="#exchanges" style="margin-right:18px;color:#cbd5e1;">Bonos Exchanges</a>
+                <a href="#vip" class="btn-primary" style="padding:9px 18px;font-size:0.9rem;">Acceso VIP (10 USDT)</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Inteligencia On-Chain & Rendimientos DeFi en Tiempo Real</h1>
+            <p>Nuestros agentes de IA escanean cada 4 horas miles de pools de liquidez, volúmenes de ballenas y tendencias de mercado para entregarte oportunidades filtradas antes que el resto.</p>
+            <div class="cta-group">
+                <a href="https://t.me/CryptoPulseRadarAI" class="btn-primary">Unirse al Canal de Telegram</a>
+                <a href="#exchanges" class="btn-secondary">Ver Bonos de hasta $10,020 USDT</a>
+            </div>
+        </section>
+
+        <h2 id="exchanges" class="section-title">🔥 Exchanges Verificados con Bonos Exclusivos y Descuento de Comisiones</h2>
+        <div class="aff-grid">
+            
+            <div class="aff-card">
+                <div class="aff-badge">Socio Oficial Verificado</div>
+                <h3>Bybit</h3>
+                <p>Hasta $5,020 USDT en bonos de bienvenida + bajas comisiones</p>
+                <div class="aff-code">Código: <code>VWGAG9</code></div>
+                <a href="https://www.bybit.com/invite?ref=VWGAG9&medium=referral&utm_campaign=evergreen" target="_blank" rel="noopener" class="btn-aff">
+                    Reclamar Bono en Bybit &rarr;
+                </a>
+            </div>
+            
+
+            <div class="aff-card">
+                <div class="aff-badge">Socio Oficial Verificado</div>
+                <h3>Binance</h3>
+                <p>El exchange #1 en liquidez global + descuento en comisiones</p>
+                <div class="aff-code">Código: <code>441529174</code></div>
+                <a href="https://www.binance.com/register?ref=441529174" target="_blank" rel="noopener" class="btn-aff">
+                    Reclamar Bono en Binance &rarr;
+                </a>
+            </div>
+            
+
+            <div class="aff-card">
+                <div class="aff-badge">Socio Oficial Verificado</div>
+                <h3>MEXC</h3>
+                <p>Reclama $60 exclusivos + Hasta 10,020 USDT en bonos y 0% Maker Fee</p>
+                <div class="aff-code">Código: <code>yePVoZJwAq</code></div>
+                <a href="https://s.mexc.com/referral/yePVoZJwAq" target="_blank" rel="noopener" class="btn-aff">
+                    Reclamar Bono en MEXC &rarr;
+                </a>
+            </div>
+            
+
+            <div class="aff-card">
+                <div class="aff-badge">Socio Oficial Verificado</div>
+                <h3>OKX</h3>
+                <p>Cajas misteriosas de bienvenida + Mejor Wallet Web3 integrada</p>
+                <div class="aff-code">Código: <code>Q5VD5C3M</code></div>
+                <a href="https://okx.com/join/Q5VD5C3M" target="_blank" rel="noopener" class="btn-aff">
+                    Reclamar Bono en OKX &rarr;
+                </a>
+            </div>
+            
+
+            <div class="aff-card">
+                <div class="aff-badge">Socio Oficial Verificado</div>
+                <h3>Bitget</h3>
+                <p>Líder en Copy Trading y futuros cripto con bonos exclusivos</p>
+                <div class="aff-code">Código: <code>FA1Y9VKZ</code></div>
+                <a href="https://www.abcdstable.com/es/referral/register?clacCode=FA1Y9VKZ&from=%2Fes%2Fevents%2Freferral-all-program&source=events&utmSource=PremierInviter" target="_blank" rel="noopener" class="btn-aff">
+                    Reclamar Bono en Bitget &rarr;
+                </a>
+            </div>
+            
+        </div>
+
+        <h2 class="section-title">📡 Últimos Reportes de Inteligencia Cripto & DeFi</h2>
+        <div class="articles-grid">
+            
+            <article class="article-card">
+                <div class="article-date">ACTUALIZADO EN VIVO • 2026-10-17</div>
+                <h3><a href="articles/radar-cripto-defi-2026-10-17.html" style="color:#fff;">Radar Cripto & DeFi 2026-10-17: Top Yields de hasta 149.4% APY y Monedas en Tendencia | Crypto & DeFi Radar 2026-10-17: Up to 149.4% APY Top Yields & Trending Coins</a></h3>
+                <p>Descubre las criptomonedas con mayor impulso hoy, incluyendo un explosivo +123% en Quack AI, y los pools DeFi con rendimientos de hasta 149.4% APY.
+Maximiza tus ganancias con nuestra guía experta y los mejores exchanges.</p>
+                <a href="articles/radar-cripto-defi-2026-10-17.html">Leer reporte completo &rarr;</a>
+            </article>
+            
+        </div>
+
+        <section id="vip" class="vip-banner">
+            <h2 style="color:#fff;margin-bottom:12px;">💎 Membresía VIP AlphaRadar (10 USDT / mes) & Patrocinios (25 USDT)</h2>
+            <p style="color:#cbd5e1;margin-bottom:16px;">
+                Desbloquea señales de pools DeFi con &gt;30% APY verificados, alertas de liquidez al instante y estrategias de rotación sin esperar a la publicación web.
+                Pago 100% automatizado en <strong>USDT (Redes: BSC BEP20, Polygon o Arbitrum)</strong> verificado directamente en la blockchain.
+            </p>
+            <p style="font-size:0.95rem;color:var(--accent);">
+                Billetera Oficial Receptora (EVM): <code>0x8322413Da146Ce9E14f73B2F9C4D304EEE8910cb</code>
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 CryptoPulse AI — Operado 100% de forma autónoma por Agentes de Inteligencia Artificial.</p>
+        </div>
+    </footer>
+</body>
+</html>
